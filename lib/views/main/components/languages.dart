@@ -17,7 +17,7 @@ class Coding extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
           child: Text(
-            "Coding",
+            "Languages",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
@@ -35,7 +35,7 @@ class Coding extends StatelessWidget {
         ),
         const AnimatedLinearProgressIndicator(
           percentage: 0.75,
-          label: "JavaScript (ES6)",
+          label: "JavaScript (ES6+)",
         ),
         const AnimatedLinearProgressIndicator(
           percentage: 0.60,

@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_profile/screens/home/home_screen.dart';
 // import 'package:flutter_profile/screens/main/main_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio/views/main/main_screen.dart';
+import 'package:my_portfolio/views/home/home_screen.dart';
 
 import 'constants.dart';
 
 void main() {
-  runApp(MyPortfolio());
+  runApp(const MyPortfolio());
 }
 
 class MyPortfolio extends StatelessWidget {
+  const MyPortfolio({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class MyPortfolio extends StatelessWidget {
               bodyText2: const TextStyle(color: kBodyTextColor),
             ),
       ),
-      home: const MainScreen(),
+      home: const HomeScreen(),
     );
   }
 }

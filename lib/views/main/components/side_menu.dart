@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/constants.dart';
 
 import 'area_info_text.dart';
-import 'coding.dart';
 import 'knowledges.dart';
+import 'languages.dart';
 import 'my_info.dart';
 import 'skills.dart';
 
@@ -79,10 +79,10 @@ class SideMenu extends StatelessWidget {
                                 ? SvgPicture.asset("icons/github.svg")
                                 : SvgPicture.asset("assets/icons/github.svg"),
                           ),
-                          // IconButton(
-                          //   onPressed: () {},
-                          //   icon: SvgPicture.asset("icons/gitlab.png"),
-                          // ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset("assets/icons/gitlab.svg"),
+                          ),
                           const Spacer(),
                         ],
                       ),

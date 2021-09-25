@@ -16,15 +16,14 @@ class Knowledges extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
           child: Text(
-            "Knowledges",
+            "Knowledge",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        const KnowledgeText(
-            text: "AWS (Lambda, Cognito,\n API Gateway, Aurora MySQL)"),
-        const KnowledgeText(text: "Pipelines"),
-        const KnowledgeText(text: "Containers, Docker, Kubernetes"),
-        const KnowledgeText(text: "Git Knowledge"),
+        const KnowledgeText(text: "Cloud (AWS, Azure)"),
+        const KnowledgeText(text: "CI/CD Pipelines"),
+        const KnowledgeText(text: "Docker, Kubernetes"),
+        const KnowledgeText(text: "Gitlab, Github, Azure DevOps"),
       ],
     );
   }
@@ -50,7 +49,7 @@ class KnowledgeText extends StatelessWidget {
             color: kPrimaryColor,
           ),
           const SizedBox(width: kDefaultPadding / 2),
-          Text(text, overflow: TextOverflow.fade, maxLines: 2),
+          Text(text, overflow: TextOverflow.ellipsis, maxLines: 2),
         ],
       ),
     );

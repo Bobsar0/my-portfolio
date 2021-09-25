@@ -1,38 +1,123 @@
 class Project {
-  final String? title, description;
+  final int? id;
+  final String title;
+  final String? description, languages, repoLink, appLink;
 
-  Project({this.title, this.description});
+  Project(
+      {this.id,
+      required this.title,
+      this.description,
+      this.languages,
+      this.repoLink,
+      this.appLink});
 }
 
-List<Project> demoProjects = [
+List<Project> personalProjects = [
   Project(
-    title: "Responsive Admin Panel or Dashboard - Flutter UI",
+    id: 1,
+    title: "Bookshelf App - React UI",
+    languages: 'React',
+    repoLink: 'https://github.com/Bobsar0/MyReads',
     description:
-        "On Flutter V2.* web officially supported on a stable branch. Today I share an Admin panel or you can call it dashboard UI build with flutter. Now you can build your app dashboard using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
+        "A book shelf app that allows one to select and categorize books that have been read, are currently reading, or want to read.",
   ),
   Project(
-    title: "E-Commerce Complete App - Flutter UI",
+    id: 2,
+    title:
+        "Fast Food Restaurant App - HTML/CSS/JavaScript, Node.js, PostgreSQL",
+    languages: 'HTML/CSS/JavaScript, Node.js/Express',
+    repoLink: 'https://github.com/Bobsar0/Fast-Food-Fast',
+    appLink: 'https://fast-food-fast-bobsar0.herokuapp.com',
     description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+        "Food delivery service app  built using plain HTML5, CSS, JS for front end and Node.js for the backend.",
   ),
   Project(
-    title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",
+    title: "Currency Converter - JavaScript ES6",
+    repoLink: "https://github.com/Bobsar0/CurrencyConverter",
+    appLink: 'https://bobsar0.github.io/CurrencyConverter',
     description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+        "Currency converter Progressive Web App built using Javascript ES6 modules as part of the 2018 Google Africa Scholarship Program.",
   ),
   Project(
-    title: "Chat/Messaging App Light and Dark Theme - Flutter UI",
+    title: "Flappy Bird Game - JavaScript",
+    languages: 'JavaScript',
+    repoLink: 'https://github.com/Bobsar0/Flappy-Bird',
+    appLink: 'https://bobsar0.github.io/Flappy-Bird',
     description:
-        "Today we gonna build messing/chat app #ui using #flutter that runs both Android and iOS devices also has a dark and light theme. We create in total 4 screens all of that support both Dark Theme and Light Theme. At first, we design a welcome screen that contains an image with a tag line also has a skip button.",
+        "Flappy Bird game written in JavaScript. Use spacebar to control.",
   ),
   Project(
-    title: "Welcome page, Login Page and Sign up page - Flutter UI",
-    description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+    title: "Photo gallery app - Go",
+    languages: 'Go',
+    repoLink: 'https://github.com/Bobsar0/PhotoSTORM',
+    description: "Photo Gallery application where users can upload photos",
   ),
   Project(
-    title: "Covid-19 App - Flutter UI",
+    title: "Timed Quiz App - Go",
+    repoLink: "https://github.com/Bobsar0/TimedQuiz",
     description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+        "Timed Quiz that reads in questions provided via a CSV file and gives the quiz to a user",
+  ),
+  Project(
+    title: "Quiz App - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/quizzler-flutter",
+    description: "A simple quiz app",
+  ),
+  Project(
+    title: "Dice - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/dice-flutter",
+    description: "A dice rolling app",
+  ),
+  Project(
+    title: "BMI Calculator - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/bmi-calculator-flutter",
+    description: "Body Mass Index Calculator",
+  ),
+  Project(
+    title: "TODO App - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/todo-amplify-getx",
+    description: "Flutter TODO app using AWS amplify and GetX framework",
+  ),
+  Project(
+    title: "Weather App - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/weather-flutter",
+    description:
+        "Weather app that shows live weather data in the current location of the device as well as the weather for any city you can think of",
+  ),
+  Project(
+    title: "Xylophone App - Flutter UI",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/xylophone-flutter",
+    description: "A musical app with the Xylophone",
+  ),
+  Project(
+    title: "Flash Chat - Flutter, Firebase",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/flash-chat-flutter",
+    description:
+        "Timed Quiz that reads in questions provided via a CSV file and gives the quiz to a user",
+  ),
+  Project(
+    title: "Authors Haven backend - Node.js/Express, PostgreSQL",
+    repoLink: "https://github.com/andela/neon-ah-backend",
+    description: "Backend of a social platform for writers",
+  ),
+  Project(
+    title: "Simple Chat System - Java",
+    repoLink: "https://gitlab.com/java-bobsar0/simple-chat-system",
+    appLink: "https://replit.com/@bobsar0/ChatSystem?v=1",
+    description:
+        "A Client/Server chatting system implemented in Java using multi-threaded architecture",
+  ),
+  Project(
+    title: "ConnectN game - Java",
+    repoLink: "https://gitlab.com/java-bobsar0/myconnectn",
+    appLink: "https://replit.com/@bobsar0/ConnectN?v=1",
+    description:
+        "ConnectN is a game identical to Connect4 except that the winning condition is that N counters of the same colour are placed in a row vertically, horizantally or diagonally",
+  ),
+  Project(
+    title: "Database Admin console - Python, SQL",
+    appLink:
+        "https://replit.com/@bobsar0/DA-Databases-Assignment3Database-APIs",
+    description: "An SQL database console for managing employees",
   ),
 ];
