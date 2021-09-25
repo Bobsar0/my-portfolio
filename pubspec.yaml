@@ -38,6 +38,8 @@ dependencies:
   google_fonts: ^2.1.0
   # Draw SVG (and some Android VectorDrawable (XML)) files on a Flutter Widget.
   flutter_svg: ^0.22.0
+  # Text animations [Flutter Favorite]
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +66,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
