@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/common/utils/constants.dart';
+import 'package:my_portfolio/controllers/controller.dart';
 
 class CVDownload extends StatelessWidget {
-  const CVDownload({
+  CVDownload({
     Key? key,
   }) : super(key: key);
+
+  final AppController _controller = AppController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,14 @@ class CVDownload extends StatelessWidget {
               ),
             ),
             const SizedBox(width: kDefaultPadding / 2),
-            const Icon(Icons.download_rounded, color: kPrimaryColor)
+            IconButton(
+              icon: const Icon(Icons.download_rounded),
+              color: kPrimaryColor,
+              onPressed: () async {
+                await _controller.downloadFile(
+                    '/assets/files/resume.pdf', "Resume - Steve Onyeneke");
+              },
+            )
           ],
         ),
       ),

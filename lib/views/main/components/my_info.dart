@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/views/main/components/social_card.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -8,7 +9,7 @@ class MyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.23,
+      aspectRatio: 1.0,
       child: Container(
         color: const Color(0xFF242430),
         child: Column(
@@ -24,14 +25,15 @@ class MyInfo extends StatelessWidget {
               style: Theme.of(context).textTheme.subtitle2,
             ),
             const Text(
-              "Full-stack developer",
+              "Full Stack Developer",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w200,
                 height: 1.5,
               ),
             ),
-            const Spacer(flex: 2),
+            SocialCard(),
+            const Spacer(flex: 1),
           ],
         ),
       ),

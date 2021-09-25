@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/common/utils/constants.dart';
-import 'package:my_portfolio/views/main/components/social_card.dart';
 
 import 'area_info_text.dart';
 import 'cv_download.dart';
@@ -37,7 +36,6 @@ class SideMenu extends StatelessWidget {
                     Divider(),
                     SizedBox(height: kDefaultPadding / 2),
                     CVDownload(),
-                    SocialCard(),
                   ],
                 ),
               ),
