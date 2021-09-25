@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/common/utils/assets.dart';
 import 'package:my_portfolio/common/utils/constants.dart';
 import 'package:my_portfolio/common/utils/responsive.dart';
 import 'package:my_portfolio/controllers/controller.dart';
+import 'package:my_portfolio/views/home/components/profile_button.dart';
 
 import 'banner_animated_text.dart';
 
@@ -20,7 +22,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'images/background.jpeg',
+            Assets.backgroundImg,
             fit: BoxFit.cover,
           ),
           Container(color: kDarkColor.withOpacity(0.66)),
@@ -43,25 +45,9 @@ class HomeBanner extends StatelessWidget {
                 const BannerAnimatedText(),
                 const SizedBox(height: kDefaultPadding),
                 if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () async {
-                      await appController.launchUrl(
-                          context,
-                          'https://www.linkedin.com/in/steveonyeneke/',
-                          'Could not launch LinkedIn Profile');
-                    },
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: kDefaultPadding * 2,
-                        vertical: kDefaultPadding,
-                      ),
-                      backgroundColor: kPrimaryColor,
-                    ),
-                    child: const Text(
-                      'LINKEDIN PROFILE',
-                      style: TextStyle(color: kDarkColor),
-                    ),
-                  ),
+                  ProfileButton(
+                      text: 'LINKEDIN PROFILE',
+                      url: 'https://www.linkedin.com/in/steveonyeneke/'),
               ],
             ),
           )

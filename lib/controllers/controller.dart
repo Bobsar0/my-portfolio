@@ -1,6 +1,5 @@
-import 'dart:html';
+// import 'dart:html';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -8,7 +7,7 @@ class AppController {
   Future<void> launchUrl(
       BuildContext context, String url, String errorText) async {
     try {
-      await launch(url, forceWebView: true);
+      await launch(url);
     } catch (e) {
       showDialog(
         context: context,
@@ -27,10 +26,10 @@ class AppController {
   }
 
   Future<void> downloadFile(String url, String fileName) async {
-    if (kIsWeb) {
-      AnchorElement anchorElement = AnchorElement(href: url);
-      anchorElement.download = fileName;
-      anchorElement.click();
-    }
+    // if (kIsWeb) {
+    //   AnchorElement anchorElement = AnchorElement(href: url);
+    //   anchorElement.download = fileName;
+    //   anchorElement.click();
+    // }
   }
 }

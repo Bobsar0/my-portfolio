@@ -32,7 +32,6 @@ class ProjectCard extends StatelessWidget {
             const Spacer(),
             Text(
               project.description!,
-              // textAlign: TextAlign.justify,
               maxLines:
                   Responsive.isDesktop(context) || Responsive.isTablet(context)
                       ? 4

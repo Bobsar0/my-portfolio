@@ -11,8 +11,10 @@ class BannerAnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
-      style: Theme.of(context).textTheme.subtitle1!,
-      maxLines: 1,
+      style: Responsive.isMobile(context)
+          ? Theme.of(context).textTheme.subtitle2!
+          : Theme.of(context).textTheme.subtitle1!,
+      maxLines: 2,
       child: Row(
         children: [
           const Icon(
@@ -20,7 +22,7 @@ class BannerAnimatedText extends StatelessWidget {
             size: kDefaultPadding / 2,
             color: kPrimaryColor,
           ),
-          const Text('  I '),
+          // const Text('  I '),
           Responsive.isMobile(context)
               ? const Expanded(child: AnimatedText())
               : const AnimatedText(),
@@ -38,14 +40,15 @@ class AnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(animatedTexts: [
-      TyperAnimatedText('develop frontend and backend of web and mobile apps.',
+      TyperAnimatedText(
+          ' I develop frontend and backend of web and mobile apps.',
           speed: const Duration(milliseconds: 60)),
       TyperAnimatedText(
-        'create continuous integration and deployment pipelines.',
+        '  I create continuous integration and deployment pipelines.',
         speed: const Duration(milliseconds: 60),
       ),
       TyperAnimatedText(
-        'am self motivated and team oriented.',
+        '  I am self motivated and team oriented.',
         speed: const Duration(milliseconds: 60),
       )
     ]);
