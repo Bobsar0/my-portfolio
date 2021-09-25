@@ -12,8 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MainScreen(
       children: [
-        HomeBanner(),
-        PersonalProjects(),
+        HomeBanner(), PersonalProjects(),
+        // Recommendations(),
       ],
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/models/Recommendation.dart';
 import 'package:my_portfolio/models/recommendation.dart';
 
 import '../../../constants.dart';
@@ -31,7 +30,7 @@ class RecommendationCard extends StatelessWidget {
             recommendation.text!,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(height: 1.5),
+            style: const TextStyle(height: 1.5),
           )
         ],
       ),
