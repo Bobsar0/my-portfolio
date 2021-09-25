@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/constants.dart';
+import 'package:my_portfolio/common/utils/constants.dart';
+import 'package:my_portfolio/common/utils/responsive.dart';
 
 import 'components/side_menu.dart';
 
@@ -10,29 +11,31 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // We hide the appbar on desktop
-      // appBar: AppBar(
-      //   backgroundColor: kBackgroundColor,
-      //   leading: Builder(
-      //     builder: (context) => IconButton(
-      //       onPressed: () {
-      //         Scaffold.of(context).openDrawer();
-      //       },
-      //       icon: const Icon(Icons.menu),
-      //     ),
-      //   ),
-      // ),
-      // drawer: SideMenu(),
+      appBar: Responsive.isDesktop(context)
+          ? null
+          : AppBar(
+              backgroundColor: kBackgroundColor,
+              leading: Builder(
+                builder: (context) => IconButton(
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  icon: const Icon(Icons.menu),
+                ),
+              ),
+            ),
+      drawer: const SideMenu(),
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: kMaxWidth),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Expanded(
-                flex: 2,
-                child: SideMenu(),
-              ),
+              if (Responsive.isDesktop(context))
+                const Expanded(
+                  flex: 2,
+                  child: SideMenu(),
+                ),
               const SizedBox(width: kDefaultPadding),
               Expanded(
                 flex: 7,

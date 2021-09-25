@@ -1,11 +1,9 @@
 class Project {
-  final int? id;
   final String title;
   final String? description, languages, repoLink, appLink;
 
   Project(
-      {this.id,
-      required this.title,
+      {required this.title,
       this.description,
       this.languages,
       this.repoLink,
@@ -14,37 +12,70 @@ class Project {
 
 List<Project> personalProjects = [
   Project(
-    id: 1,
-    title: "Bookshelf App - React UI",
-    languages: 'React',
-    repoLink: 'https://github.com/Bobsar0/MyReads',
-    description:
-        "A book shelf app that allows one to select and categorize books that have been read, are currently reading, or want to read.",
-  ),
-  Project(
-    id: 2,
-    title:
-        "Fast Food Restaurant App - HTML/CSS/JavaScript, Node.js, PostgreSQL",
+    title: "Restaurant App - HTML/CSS/JS, Node.js, PostgreSQL",
     languages: 'HTML/CSS/JavaScript, Node.js/Express',
     repoLink: 'https://github.com/Bobsar0/Fast-Food-Fast',
     appLink: 'https://fast-food-fast-bobsar0.herokuapp.com',
     description:
-        "Food delivery service app  built using plain HTML5, CSS, JS for front end and Node.js for the backend.",
+        "Food delivery service app built using plain HTML5, CSS3, JS for front end, Node.js/Express for the backend and PostgreSQL with Sequelize ORM for database operations",
   ),
   Project(
-    title: "Currency Converter - JavaScript ES6",
+    title: "Currency Converter - JS ES6",
     repoLink: "https://github.com/Bobsar0/CurrencyConverter",
     appLink: 'https://bobsar0.github.io/CurrencyConverter',
     description:
         "Currency converter Progressive Web App built using Javascript ES6 modules as part of the 2018 Google Africa Scholarship Program.",
   ),
   Project(
-    title: "Flappy Bird Game - JavaScript",
+    title: "Flappy Bird Game - JS",
     languages: 'JavaScript',
     repoLink: 'https://github.com/Bobsar0/Flappy-Bird',
     appLink: 'https://bobsar0.github.io/Flappy-Bird',
     description:
         "Flappy Bird game written in JavaScript. Use spacebar to control.",
+  ),
+  // Project(
+  //   title: "Quiz App - Flutter",
+  //   repoLink: "https://gitlab.com/bobsar01-flutter-apps/quizzler-flutter",
+  //   description: "A simple quiz app",
+  // ),
+  Project(
+    title: "Dice - Flutter",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/dice-flutter",
+    description: "A dice rolling app",
+  ),
+  Project(
+    title: "BMI Calculator - Flutter",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/bmi-calculator-flutter",
+    description: "Body Mass Index Calculator",
+  ),
+  // Project(
+  //   title: "TODO App - Flutter",
+  //   repoLink: "https://gitlab.com/bobsar01-flutter-apps/todo-amplify-getx",
+  //   description: "Flutter TODO app using AWS amplify and GetX framework",
+  // ),
+  Project(
+    title: "Weather App - Flutter",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/weather-flutter",
+    description:
+        "Weather app that shows live weather data in the current location of the device as well as the weather for any city you can think of",
+  ),
+  Project(
+    title: "Xylophone App - Flutter",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/xylophone-flutter",
+    description: "A musical app with the Xylophone",
+  ),
+  Project(
+    title: "Flash Chat - Flutter, Firebase",
+    repoLink: "https://gitlab.com/bobsar01-flutter-apps/flash-chat-flutter",
+    description: "Fast messaging application built with Flutter and Firebase",
+  ),
+  Project(
+    title: "Bookshelf App - React",
+    languages: 'React',
+    repoLink: 'https://github.com/Bobsar0/MyReads',
+    description:
+        "A book shelf app that allows one to select and categorize books that have been read, are currently reading, or want to read.",
   ),
   Project(
     title: "Photo gallery app - Go",
@@ -55,43 +86,6 @@ List<Project> personalProjects = [
   Project(
     title: "Timed Quiz App - Go",
     repoLink: "https://github.com/Bobsar0/TimedQuiz",
-    description:
-        "Timed Quiz that reads in questions provided via a CSV file and gives the quiz to a user",
-  ),
-  Project(
-    title: "Quiz App - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/quizzler-flutter",
-    description: "A simple quiz app",
-  ),
-  Project(
-    title: "Dice - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/dice-flutter",
-    description: "A dice rolling app",
-  ),
-  Project(
-    title: "BMI Calculator - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/bmi-calculator-flutter",
-    description: "Body Mass Index Calculator",
-  ),
-  Project(
-    title: "TODO App - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/todo-amplify-getx",
-    description: "Flutter TODO app using AWS amplify and GetX framework",
-  ),
-  Project(
-    title: "Weather App - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/weather-flutter",
-    description:
-        "Weather app that shows live weather data in the current location of the device as well as the weather for any city you can think of",
-  ),
-  Project(
-    title: "Xylophone App - Flutter UI",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/xylophone-flutter",
-    description: "A musical app with the Xylophone",
-  ),
-  Project(
-    title: "Flash Chat - Flutter, Firebase",
-    repoLink: "https://gitlab.com/bobsar01-flutter-apps/flash-chat-flutter",
     description:
         "Timed Quiz that reads in questions provided via a CSV file and gives the quiz to a user",
   ),

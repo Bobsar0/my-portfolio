@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../common/utils/constants.dart';
 
 class Knowledges extends StatelessWidget {
   const Knowledges({
@@ -48,8 +48,9 @@ class KnowledgeText extends StatelessWidget {
             size: kDefaultPadding,
             color: kPrimaryColor,
           ),
-          const SizedBox(width: kDefaultPadding / 2),
-          Text(text, overflow: TextOverflow.ellipsis, maxLines: 2),
+          const SizedBox(width: kDefaultPadding * 0.2),
+          Expanded(
+              child: Text(text, overflow: TextOverflow.ellipsis, maxLines: 2)),
         ],
       ),
     );
