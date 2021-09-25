@@ -40,6 +40,8 @@ dependencies:
   flutter_svg: ^0.22.0
   # Text animations [Flutter Favorite]
   animated_text_kit: ^4.2.1
+  # Plugin for launching a URL [Flutter Favorite]
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:

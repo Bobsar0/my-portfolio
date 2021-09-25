@@ -26,7 +26,7 @@ class SideMenu extends StatelessWidget {
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(kDefaultPadding),
                 child: Column(
-                  children: const [
+                  children: [
                     AreaInfoText(title: "Residence", text: "United Kingdom"),
                     AreaInfoText(title: "City", text: "London"),
                     AreaInfoText(title: "Experience", text: "4+ years"),

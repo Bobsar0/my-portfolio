@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/common/utils/constants.dart';
 import 'package:my_portfolio/common/utils/responsive.dart';
+import 'package:my_portfolio/controllers/controller.dart';
 
 import 'banner_animated_text.dart';
 
 class HomeBanner extends StatelessWidget {
-  const HomeBanner({
+  HomeBanner({
     Key? key,
   }) : super(key: key);
+
+  final AppController appController = AppController();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +44,12 @@ class HomeBanner extends StatelessWidget {
                 const SizedBox(height: kDefaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      await appController.launchUrl(
+                          context,
+                          'https://www.linkedin.com/in/steveonyeneke/',
+                          'Could not launch LinkedIn Profile');
+                    },
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
                         horizontal: kDefaultPadding * 2,
